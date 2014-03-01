@@ -12,6 +12,7 @@ Links added to front-end site name menu:
 * Plugins
 * Tools > Import Content
 * Tools > Regenerate Thumbnails (only if plugin is installed: [Regenerate Thumbnails](http://wordpress.org/plugins/regenerate-thumbnails/))
+* "Move to Trash" link on Posts & Pages
 
 More features coming soon...
 
