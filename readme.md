@@ -1,6 +1,6 @@
 ## Test Site Tools
 
-Just a simple plugin that makes it easier to manage test/demo sites. 
+Just a simple plugin that makes it easier to manage development/demo sites. Don't take it too seriously. 
 
 ### Features
 
@@ -14,7 +14,9 @@ Links added to front-end site name menu:
 * Tools > Regenerate Thumbnails (only if plugin is installed: [Regenerate Thumbnails](http://wordpress.org/plugins/regenerate-thumbnails/))
 * "Move to Trash" link on Posts & Pages
 
-More features coming soon...
+#### Themes Pages
+
+Integrated [See More Themes](http://wordpress.org/plugins/see-more-themes/) into Test Site Tools.
 
 ## Notes
 
