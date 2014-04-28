@@ -3,7 +3,7 @@
  * Plugin Name: Test Site Tools
  * Plugin URI: http://buildwpyourself.com/downloads/test-site-tools/
  * Description: A simple WordPress plugin that makes it easier to manage test/demo sites - this plugin will slowly develop over time based on personal experiences with managing test/demo sites.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Sean Davis
  * Author URI: http://seandavis.co
  * License: GPL2
@@ -54,10 +54,10 @@ class TST_Test_Site_Tools {
 	public function __construct() {
 		
 		// define plugin name
-		define( 'TST_NAME', __( 'Test Site Tools', 'tst' ) );
+		define( 'TST_NAME', 'Test Site Tools', 'tst' );
 		
 		// define plugin version
-		define( 'TST_VERSION', '1.0.0' );
+		define( 'TST_VERSION', '1.0.1' );
 		
 		// define plugin directory
 		define( 'TST_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
