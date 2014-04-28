@@ -27,12 +27,7 @@
  * @package Test Site Tools
  * @category Core
  */
-
-
-// No accessing this file directly
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
 
 
 /**
@@ -40,16 +35,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * This class sets up the rest of the plugin by requiring the necessary
  * files, defining constants, and other important stuff.
- *
- * @since 1.0.0
  */
 class TST_Test_Site_Tools {
 
 		
 	/**
 	 * constructor for TST_Test_Site_Tools 
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct() {
 		
@@ -78,8 +69,6 @@ class TST_Test_Site_Tools {
 
 	/**
 	 * load TST textdomain
-	 *
-	 * @since 1.0.0
 	 */
 	public function load_textdomain() {
 		load_plugin_textdomain( 'tst', false, TST_DIR . "languages" );
@@ -88,8 +77,6 @@ class TST_Test_Site_Tools {
 	
 	/**
 	 * require additional plugin files
-	 *
-	 * @since 1.0.0
 	 */
 	private function includes() {
 		require_once( TST_DIR . 'includes/admin/class-tst-toolbar.php' );	// admin toolbar
