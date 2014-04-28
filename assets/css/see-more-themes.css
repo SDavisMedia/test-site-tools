@@ -1,0 +1,132 @@
+/* match what already happens *above* 2000px - lasts all the way down to 1120px */
+@media only screen and (max-width: 2000px) {
+	.theme-browser .theme {
+		margin-right: 3%;
+		width: 17.6%;
+		border: 1px solid #dedede;
+	}
+	.theme-browser .theme:nth-child(3n),
+	.theme-browser .theme:nth-child(4n) {
+		margin-right: 3%;
+	}
+	.theme-browser .theme:nth-child(5n) {
+		margin-right: 0;
+	}
+}
+
+/* we'll adjust the theme display structure a bit just for a given range then give it back to core */
+@media only screen and (max-width: 2000px) and (min-width: 782px) {
+	.theme-browser .theme .theme-name,
+	.theme-browser .theme.active .theme-name {
+		padding: 10px 14px;
+	}
+	.theme-browser .theme .theme-actions {
+		position: static;
+		opacity: 1;
+		padding: 10px;
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		border-width: 1px 0 0;
+		height: auto;
+	}
+	.theme-browser .theme .more-details {
+		top: 20%;
+		right: 20%;
+		left: 20%;
+		font-size: 13px;
+	}
+	.wp-core-ui .theme-browser .theme-actions .button, 
+	.wp-core-ui .theme-browser .theme-actions .button-primary, 
+	.wp-core-ui .theme-browser .theme-actions .button-secondary {
+		background: none;
+		font-size: 11px;
+		line-height: 20px;
+		font-weight: bold;
+		padding: 0 8px 0 4px;
+		border: none;
+		outline: none;
+		border-radius: 0;
+		box-shadow: none;
+		margin: 0;
+		height: auto;
+	}
+	.wp-core-ui .theme-browser .theme-actions .button-primary {
+		color: #2EA2CC;
+		border-right: 1px solid #ddd;
+	} 
+	.wp-core-ui .theme-browser .active .theme-actions .button-primary {
+		color: #fff;
+		border: none;
+	}
+	.theme-browser .theme.add-new-theme span:after {
+		font: 400 50px/80px dashicons;
+		width: 70px;
+		height: 70px;
+		margin-left: -35px;
+	}
+	.theme-browser .theme .theme-installed, 
+	.theme-browser .theme .theme-update {
+		font-size: 11px;
+		height: 30px;
+		line-height: 30px;
+	}
+}
+
+/* just smaller than 1120px, let's get more themes in the mix down to 900px */
+@media only screen and (max-width: 1120px) {
+	.theme-browser .theme {
+		margin-right: 2.66667%;
+		width: 22.95%;
+		border: 1px solid #dedede;
+	}
+	.theme-browser .theme:nth-child(even),
+	.theme-browser .theme:nth-child(odd),
+	.theme-browser .theme:nth-child(3n) {
+		margin-right: 2.66667%;
+	}
+	.theme-browser .theme:nth-child(4n) {
+		margin-right: 0;
+	}
+}
+
+/* the admin menu folds at 900px so let's go 3 across since we're on smaller screens */
+@media only screen and (max-width: 900px) {
+	.theme-browser .theme {
+		margin-right: 5%;
+		width: 30%;
+	}
+	.theme-browser .theme:nth-child(even),
+	.theme-browser .theme:nth-child(odd) {
+		margin-right: 5%;
+	}
+	.theme-browser .theme:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+
+/* we're running out of space at 600px so we'll go halfsies */
+@media only screen and (max-width: 600px) {
+	.theme-browser .theme {
+		width: 47.5%;
+		margin-right: 0;
+	}
+	.theme-browser .theme:nth-child(odd),
+	.theme-browser .theme:nth-child(3n) {
+		margin-right: 5%;
+	}
+	.theme-browser .theme:nth-child(even) {
+		margin-right: 0;
+	}
+}
+
+/* we're in the clear now */
+@media only screen and (max-width: 480px) {
+	.theme-browser .theme {
+		width: 100%;
+		margin-right: 0;
+	}
+	.theme-browser .theme:nth-child(odd),
+	.theme-browser .theme:nth-child(2n),
+	.theme-browser .theme:nth-child(3n) {
+		margin-right: 0;
+	}
+}

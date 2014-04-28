@@ -68,6 +68,9 @@ class TST_Test_Site_Tools {
 		// load text domain
 		add_action( 'init', array( $this, 'load_textdomain' ) );
 		
+		// load the CSS... I mean... that's what we're here for
+		add_action( 'admin_enqueue_scripts', array( $this, 'tst_see_more_themes_styles' ), 10, 2 );
+		
 		// require additional plugin files
 		$this->includes();
 	}
@@ -90,6 +93,14 @@ class TST_Test_Site_Tools {
 	 */
 	private function includes() {
 		require_once( TST_DIR . 'inc/admin/class-tst-toolbar.php' );	// admin toolbar
+	
+	/**
+	 * grab the stylesheet that applies to the themes page
+	 */
+	public function tst_see_more_themes_styles( $hook ) {
+		if ( 'themes.php' == $hook || 'theme-install.php' == $hook ) {
+			wp_enqueue_style( 'tst-see-more-themes-css', TST_URL . 'assets/css/see-more-themes.css' );
+		}
 	}
 }
 new TST_Test_Site_Tools();
