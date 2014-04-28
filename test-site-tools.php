@@ -82,7 +82,7 @@ class TST_Test_Site_Tools {
 	 * @since 1.0.0
 	 */
 	public function load_textdomain() {
-		load_plugin_textdomain( 'tst', false, TST_DIR . "inc/languages" );
+		load_plugin_textdomain( 'tst', false, TST_DIR . "languages" );
 	}
 	
 	
@@ -92,7 +92,8 @@ class TST_Test_Site_Tools {
 	 * @since 1.0.0
 	 */
 	private function includes() {
-		require_once( TST_DIR . 'inc/admin/class-tst-toolbar.php' );	// admin toolbar
+		require_once( TST_DIR . 'includes/admin/class-tst-toolbar.php' );	// admin toolbar
+	}
 	
 	/**
 	 * grab the stylesheet that applies to the themes page
