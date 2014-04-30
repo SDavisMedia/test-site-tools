@@ -29,6 +29,8 @@
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
 
+// checking for other plugins
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 /**
  * main plugin class
@@ -59,8 +61,11 @@ class TST_Test_Site_Tools {
 		// load text domain
 		add_action( 'init', array( $this, 'load_textdomain' ) );
 		
-		// load the CSS... I mean... that's what we're here for
-		add_action( 'admin_enqueue_scripts', array( $this, 'tst_see_more_themes_styles' ), 10, 2 );
+		// load the CSS for See More Themes if the actual plugin is not activated
+		$see_more_themes = is_plugin_active( 'see-more-themes/see-more-themes.php' ) ? true : false;
+		if ( false === $see_more_themes ) :
+			add_action( 'admin_enqueue_scripts', array( $this, 'tst_see_more_themes_styles' ), 10, 2 );
+		endif;
 		
 		// require additional plugin files
 		$this->includes();
