@@ -76,7 +76,7 @@ class TST_Test_Site_Tools {
 	 * load TST textdomain
 	 */
 	public function load_textdomain() {
-		load_plugin_textdomain( 'tst', false, TST_DIR . "languages" );
+		load_plugin_textdomain( 'tst', false, TST_DIR . 'languages/' );
 	}
 	
 	
